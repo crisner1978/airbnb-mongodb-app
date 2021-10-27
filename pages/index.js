@@ -5,6 +5,8 @@ import Banner from "../components/Banner";
 import SmallCard from "../components/SmallCard";
 import MediumCard from "../components/MediumCard";
 import { useEffect, useState } from "react";
+import LargeCard from "../components/LargeCard";
+import Footer from "../components/Footer";
 
 export default function Home({ places }) {
   const [cardData, setCardData] = useState([]);
@@ -17,7 +19,7 @@ export default function Home({ places }) {
         return () => response;
       });
   }, []);
-console.log(cardData)
+  console.log(cardData);
   return (
     <div className="">
       <Head>
@@ -45,11 +47,15 @@ console.log(cardData)
             ))}
           </div>
         </section>
+        <LargeCard
+          img="https://a0.muscache.com/im/pictures/2da67c1c-0c61-4629-8798-1d4de1ac9291.jpg?im_w=1440"
+          name="The Great Outdoors"
+          buttonText="Get Inspired"
+          summary="Wishlists curated by Airbnb"
+        />
       </main>
 
-      {/* Lg cards */}
-
-      {/* Footer */}
+      <Footer />
     </div>
   );
 }
