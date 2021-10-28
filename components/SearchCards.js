@@ -39,6 +39,7 @@ const SearchCards = ({
             <span className="text-gray-500 text-sm pl-1"> ({reviews} reviews)</span>
           </p>
           <div>
+            <br />
             <p className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold pb-2">
               {price} / night
             </p>

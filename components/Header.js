@@ -12,7 +12,7 @@ import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
 import { useRouter } from "next/dist/client/router";
 
-const Header = ({range}) => {
+const Header = ({ range }) => {
   const [searchInput, setSearchInput] = useState("");
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
@@ -44,10 +44,11 @@ const Header = ({range}) => {
               guests,
           }
       })
+      setSearchInput('')
   }
 
   return (
-    <header className="sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md p-5 md:px-10 lg:px-20">
+    <header className={`sticky top-0 z-50 grid grid-cols-3 shadow-md p-5 md:px-10 lg:px-20 bg-white`}>
       <div onClick={()=> router.push('/')} className="relative flex items-center h-10 cursor-pointer my-auto">
         <Image
           src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c513.png"
@@ -59,7 +60,7 @@ const Header = ({range}) => {
       </div>
       <div className="flex items-center md:border-2 rounded-full py-2 md:shadow-sm">
         <input
-          className="pl-5 bg-transparent outline-none flex-grow text-sm text-gray-600 placeholder-transparent sm:placeholder-black font-semibold"
+          className="pl-5 bg-transparent outline-none flex-grow text-sm placeholder-black font-semibold focus:placeholder-transparent"
           type="text"
           value={searchInput}
           placeholder={range || "Start your search"}

@@ -9,7 +9,7 @@ const Banner = () => {
         layout="fill"
         objectFit="cover"
         objectPosition="bottom"
-        
+
       />
       <div className="absolute top-1/2 w-full text-center">
         <p className="font-semibold text-sm sm:text-lg">Not sure where to go? Perfect.</p>
