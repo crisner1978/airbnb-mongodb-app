@@ -3,7 +3,7 @@ import Image from "next/dist/client/image";
 
 const LargeCard = ({ img, name, buttonText, summary }) => {
   return (
-    <section className="relative py-16 cursor-pointer">
+    <section className="relative py-16 cursor-default">
       <div className="relative h-96 min-w-[300px]">
         <Image src={img} layout="fill" objectFit="cover" className="rounded-2xl" />
       </div>

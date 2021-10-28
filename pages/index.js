@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import LargeCard from "../components/LargeCard";
 import Footer from "../components/Footer";
 
+
 export default function Home({ places }) {
   const [cardData, setCardData] = useState([]);
 
@@ -19,7 +20,7 @@ export default function Home({ places }) {
         return () => response;
       });
   }, []);
-  console.log(cardData);
+
   return (
     <div className="">
       <Head>
