@@ -36,7 +36,7 @@ const range = `${formatStart} to ${formatEnd}`;
   return (
     <div>
       <Header range={`${location} | ${range} | ${guests} guests`} />
-      <main className="flex">
+      <main className="flex items-start pt-1">
         <section className="flex-grow pt-14 px-6">
           <p className="text-xs">
             300+ Stays - {range} - for {guests} guests
@@ -77,8 +77,8 @@ const range = `${formatStart} to ${formatEnd}`;
           </div>
         </section>
 
-        <section className="hidden xl:inline-flex xl:min-w-[500px]">
-          <Map newData={newData} />
+        <section className="hidden xl:inline-flex xl:sticky xl:top-20 xl:min-w-[500px]">
+          <Map newData={newData} /> 
         </section>
       </main>
 

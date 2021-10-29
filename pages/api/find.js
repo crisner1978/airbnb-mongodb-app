@@ -11,7 +11,7 @@ export default async function handler(req, res) {
           $search: {
             index: "default",
             text: {
-              path: ["address.market","address.country", "name", "images"],
+              path: ["address.market","address.country", "address.country_code", "address.street", "address.suburb", "name", "images"],
               query: req.query.term,
             },
           },

@@ -48,7 +48,7 @@ const Header = ({ range }) => {
   }
 
   return (
-    <header className={`sticky top-0 z-50 grid grid-cols-3 shadow-md p-5 md:px-10 lg:px-20 bg-white`}>
+    <header className={`sticky top-0 z-50 grid grid-cols-3 shadow-md py-4 px-5 md:px-10 lg:px-20 bg-white`}>
       <div onClick={()=> router.push('/')} className="relative flex items-center h-10 cursor-pointer my-auto">
         <Image
           src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c513.png"
@@ -58,7 +58,7 @@ const Header = ({ range }) => {
           
         />
       </div>
-      <div className="flex items-center md:border-2 rounded-full py-2 md:shadow-sm">
+      <div className="flex items-center md:border-2 rounded-full md:shadow-sm">
         <input
           className="pl-5 bg-transparent outline-none flex-grow text-sm placeholder-black font-semibold focus:placeholder-transparent"
           type="text"
@@ -72,7 +72,7 @@ const Header = ({ range }) => {
         <p className="text-black font-semibold hidden md:inline pl-3">
           Become a host
         </p>
-        <GlobeAltIcon className="h-5 cursor-pointer text-gray-700" />
+        <GlobeAltIcon className="hidden md:inline-flex h-5 sm:cursor-pointer sm:text-gray-700" />
         <div className="flex items-center space-x-2 border-2 p-2 rounded-full text-gray-500">
           <MenuIcon className="h-6" />
           <UserCircleIcon className="h-6" />
