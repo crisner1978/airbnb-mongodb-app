@@ -60,9 +60,9 @@ const Map = ({ newData }) => {
             >
                 <div className="flex items-center gap-3 px-2">
                   <p className="text-gray-700 font-semibold">{result.name}</p>
-                  <button className="text-sm text-white font-semibold bg-red-400 p-2 rounded-full">
-                    Go
-                  </button>
+                  {/* <button className="text-sm text-white font-semibold bg-red-400 p-2 rounded-full"> */}
+                    {/* Go */}
+                  {/* </button> */}
                 </div>
               
             </Popup>
