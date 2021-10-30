@@ -3,6 +3,7 @@ import ReactMapGL, { Marker, Popup } from "react-map-gl";
 import { getCenter } from "geolib";
 import { LocationMarkerIcon } from "@heroicons/react/solid";
 
+
 const Map = ({ newData }) => {
   const mapRef = useRef();
   const [viewport, setViewport] = useState("");
@@ -57,10 +58,13 @@ const Map = ({ newData }) => {
               longitude={result.address.location.coordinates[0]}
               latitude={result.address.location.coordinates[1]}
             >
-              <div className="flex items-center gap-3 px-2">
-                <p className="text-gray-700 font-semibold">{result.name}</p>
-                <button className="text-sm text-white font-semibold bg-red-400 p-2 rounded-full">Go</button>
-              </div>
+                <div className="flex items-center gap-3 px-2">
+                  <p className="text-gray-700 font-semibold">{result.name}</p>
+                  <button className="text-sm text-white font-semibold bg-red-400 p-2 rounded-full">
+                    Go
+                  </button>
+                </div>
+              
             </Popup>
           ) : (
             false

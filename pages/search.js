@@ -11,10 +11,10 @@ const Search = () => {
   const [newData, setNewData] = useState([]);
   const { location, startDate, endDate, guests } = router.query;
 
-const formatStart = moment(startDate).format('MMMM Do YYYY')
-const formatEnd = moment(endDate).format('MMMM Do YYYY')
+  const formatStart = moment(startDate).format("MMMM Do YYYY");
+  const formatEnd = moment(endDate).format("MMMM Do YYYY");
 
-const range = `${formatStart} to ${formatEnd}`;
+  const range = `${formatStart} to ${formatEnd}`;
 
   useEffect(async () => {
     if (location) {
@@ -62,23 +62,26 @@ const range = `${formatStart} to ${formatEnd}`;
                 reviews,
                 price,
               }) => (
-                <SearchCards
-                  key={_id}
-                  name={name}
-                  address={address.market}
-                  img={images.picture_url}
-                  review_scores={review_scores.review_scores_rating}
-                  location={address.country}
-                  reviews={reviews.length}
-                  price={price.$numberDecimal}
-                />
+                
+
+                  <SearchCards
+                    key={_id}
+                    name={name}
+                    address={address.market}
+                    img={images.picture_url}
+                    review_scores={review_scores.review_scores_rating}
+                    location={address.country}
+                    reviews={reviews.length}
+                    price={price.$numberDecimal}
+                    id={_id}
+                  />
               )
             )}
           </div>
         </section>
 
         <section className="hidden xl:inline-flex xl:sticky xl:top-20 xl:min-w-[500px]">
-          <Map newData={newData} /> 
+          <Map newData={newData} />
         </section>
       </main>
 

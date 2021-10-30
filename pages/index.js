@@ -19,7 +19,7 @@ export default function Home({ places }) {
         setCardData(data);
         return () => response;
       });
-  }, []);
+  }, [setCardData]);
 
   return (
     <div className="">
@@ -35,7 +35,16 @@ export default function Home({ places }) {
           <h2 className="text-4xl font-semibold pb-5">City to Beach</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {places.map(({ _id, image, name, address }) => (
-              <SmallCard key={_id} img={image} name={name} address={address} />
+              <div key={_id}>
+                  <SmallCard
+                    key={_id}
+                    img={image}
+                    name={name}
+                    address={address}
+                    id={_id}
+                  />
+                
+              </div>
             ))}
           </div>
         </section>
@@ -44,7 +53,7 @@ export default function Home({ places }) {
           <h2 className="text-4xl font-semibold pt-8 pb-3">Live Outback</h2>
           <div className="flex space-x-5 overflow-scroll scrollbar-hide p-3 -ml-3">
             {cardData?.map(({ _id, images, name }) => (
-              <MediumCard key={_id} img={images.picture_url} name={name} />
+              <MediumCard key={_id} img={images.picture_url} name={name} id={_id} />
             ))}
           </div>
         </section>
