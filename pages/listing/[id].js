@@ -78,7 +78,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const data = await fetch(
-    `http://localhost:3000/api/property?${params.id}`
+    `https://airbnb-mongodb-app.vercel.app/api/property?${params.id}`
   );
   const property = await data.json();
 

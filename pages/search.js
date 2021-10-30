@@ -20,7 +20,7 @@ const Search = () => {
     if (location) {
       try {
         const response = await fetch(
-          `http://localhost:3000/api/find?term=${location}`
+          `https://airbnb-mongodb-app.vercel.app/api/find?term=${location}`
         )
           .then((response) => response.json())
           .then((data) => {

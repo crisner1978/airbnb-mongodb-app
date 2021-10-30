@@ -13,7 +13,7 @@ export default function Home({ places }) {
   const [cardData, setCardData] = useState([]);
 
   useEffect(async () => {
-    const response = await fetch("http://localhost:3000/api/cardData")
+    const response = await fetch("https://airbnb-mongodb-app.vercel.app/api/cardData")
       .then((response) => response.json())
       .then((data) => {
         setCardData(data);
