@@ -1,10 +1,10 @@
+import moment from "moment";
 import { useRouter } from "next/dist/client/router";
 import { useEffect, useState } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Map from "../components/Map";
 import SearchCards from "../components/SearchCards";
-import moment from "moment";
 
 const Search = () => {
   const router = useRouter();

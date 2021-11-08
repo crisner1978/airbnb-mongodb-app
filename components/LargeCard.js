@@ -19,7 +19,7 @@ const LargeCard = ({ img, name, buttonText, summary, text = false }) => {
         <h3
           className={`text-3xl mb-3 w-64 ${
             text
-              ? "text-red-400 font-semibold bg-white bg-opacity-80 px-4 py-2 rounded-2xl "
+              ? "text-red-400 font-semibold bg-white bg-opacity-80 px-4 py-2 rounded-2xl text-base md:text-lg xl:text-2xl"
               : "text-black"
           } `}
         >

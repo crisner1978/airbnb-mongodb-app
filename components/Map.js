@@ -1,7 +1,7 @@
+import { LocationMarkerIcon } from "@heroicons/react/solid";
+import { getCenter } from "geolib";
 import { useEffect, useRef, useState } from "react";
 import ReactMapGL, { Marker, Popup } from "react-map-gl";
-import { getCenter } from "geolib";
-import { LocationMarkerIcon } from "@heroicons/react/solid";
 
 
 const Map = ({ newData }) => {
@@ -25,7 +25,7 @@ const Map = ({ newData }) => {
     });
     return () => coordinates;
   }, [newData]);
-  console.log(newData);
+  
   // transform newData in to the {latitude: 53.123456, longitude: 43.567456}
   return (
     <ReactMapGL

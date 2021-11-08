@@ -1,8 +1,8 @@
-import React from "react";
-import Image from "next/dist/client/image";
 import { HeartIcon } from "@heroicons/react/outline";
 import { StarIcon } from "@heroicons/react/solid";
+import Image from "next/dist/client/image";
 import Link from "next/dist/client/link";
+import React from "react";
 
 const SearchCards = ({
   id,

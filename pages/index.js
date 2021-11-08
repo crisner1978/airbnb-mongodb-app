@@ -1,12 +1,12 @@
 import Head from "next/head";
-import clientPromise from "../lib/mongodb";
-import Header from "../components/Header";
-import Banner from "../components/Banner";
-import SmallCard from "../components/SmallCard";
-import MediumCard from "../components/MediumCard";
 import { useEffect, useState } from "react";
-import LargeCard from "../components/LargeCard";
+import Banner from "../components/Banner";
 import Footer from "../components/Footer";
+import Header from "../components/Header";
+import LargeCard from "../components/LargeCard";
+import MediumCard from "../components/MediumCard";
+import SmallCard from "../components/SmallCard";
+import clientPromise from "../lib/mongodb";
 
 
 export default function Home({ places }) {
